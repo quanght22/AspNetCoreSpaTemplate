@@ -1,0 +1,193 @@
+@import "_site-variables.scss";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@mixin maxwidth {
+    max-width: $MaxWidthSite;
+}
+@mixin button-margin{
+    margin-left: 10px;
+}
+/* Body */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left:10px;
+    line-height: normal; 
+}
+body {
+    background-repeat: repeat-x;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: $body-background-color;
+}
+body, td, th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: $body-td-th-color;
+}
+input[type=text],input[type="password"],textarea {
+   max-width: $MaxWidthTextBox;
+}
+textarea{
+    min-height: 70px;
+}
+.table{
+    @include maxwidth;
+}
+.container {
+    @include maxwidth;
+}
+.body-content {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 121px;
+    padding-bottom: 20px;
+}
+.body-content > .row{
+    margin-right: -10px;
+}
+
+
+/* Reponsive */
+@media (min-width: 768px)
+{
+    .container {
+        width: auto;
+    }
+}
+
+
+/* Grid Table */
+.row > table {
+  border: none;
+  border-radius: 3px;
+  background-color: $contact-font-color;
+}
+
+.row > table > thead > tr > th {
+  background-color: $navbar-toggle-active-color;
+  color:$row-table-header-color;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 80px;
+}
+
+.row > table > thead > tr > td {
+  background-color: $row-table-td-color;
+}
+
+
+.row > table > thead > tr > th.active {
+  color: $contact-font-color;
+  background-color: $navbar-toggle-active-color !important;
+}
+
+.row > table > thead > tr > th.active .arrow {
+  opacity: 1;
+}
+
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  opacity: 0.66;
+}
+
+.arrow.asc {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid $contact-font-color;
+}
+
+.arrow.dsc {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid $contact-font-color;
+}
+.labelcheckbox >  input {
+    top: 2px;
+    position: relative !important;
+    margin-right: 5px;
+    
+}
+
+
+.paging
+{
+    text-align: center;
+}
+.paging > .pagination{
+    margin:0;
+}
+.table > tbody > tr:nth-child(odd) {
+    background-color: $row-odd-color;
+}
+.table > tbody > tr:nth-child(even) {
+    background-color: $row-even-color;
+}
+.table > tbody > tr:hover {
+  background-color:$row-hover-color; 
+}
+.__cov-progress{
+    height: 4px !important;
+}
+select.pagesize{
+    width: 75px !important;
+    height: 30px;
+    display: inline-block;
+}
+.pagination > li:last-child {
+    margin-left: 5px;
+}
+.invisible{
+    display:none;
+}
+.titlepage{
+    margin-bottom: 30px;
+}
+
+.boxfilter{
+    width:100%;
+    padding-top:10px;
+    padding-bottom:42px;
+}
+.boxfilter > div{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.searchbox{
+    float: right;
+
+}
+.searchbox > .input-group-btn{
+    width:auto;
+}
+.searchbox > input {
+    width: $MaxWidthTextBox !important;
+    border-radius: 22px !important;
+}
+
+.grid{
+    border-top: 2px solid;
+    max-height: 400px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 10px;
+}
+.description{
+    width: 250px !important;
+}
+.value{
+    font-weight: normal !important;
+}
+.detail{
+    margin-top: 40px;
+    border-top: 2px solid;
+}
